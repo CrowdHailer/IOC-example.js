@@ -19,5 +19,9 @@
   "homepage": "https://github.com/CrowdHailer/IOC-example.js#readme",
   "devDependencies": {
     "watchify": "^3.2.3"
+  },
+  "dependencies": {
+    "ampersand-model": "^5.0.3",
+    "ampersand-view": "^8.0.0"
   }
 }
