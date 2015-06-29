@@ -8,16 +8,4 @@ app.useService('logger', require('./services/logger'), {
 });
 app.addFeature('shouter', require('./features/shouter'), {});
 
-app.init = function (window, root, options) {
-    // init should be defined locally for setters
-    this._global = window;
-    this._root = root;
-
-    var logger = this.getService('logger');
-    logger.log('App started');
-
-    this.startFeature('shouter');
-
-};
-
 module.exports = app;
