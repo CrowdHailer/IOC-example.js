@@ -1,52 +1,23 @@
-// Maybe require('./infrastructure')
 'use strict';
 
-function IOCApp () {
+var infrastructure = require('infrastructure');
+var app = infrastructure();
 
-}
+app.useService('logger', require('./services/logger'), {
+    label: 'DEBUG'
+});
+app.addFeature('shouter', require('./features/shouter'), {});
 
-var services = {};
-var _global = null;
+app.init = function (window, root, options) {
+    // init should be defined locally for setters
+    this._global = window;
+    this._root = root;
 
-module.exports = {
-    useService: function (name, factory, options) {
-        services[name] = {
-            factory: factory,
-            options: options,
-            instance: null
-        };
-    },
-    getService: function (name) {
-        var service = services[name],
-            instance = service.instance,
-            application = this;
+    var logger = this.getService('logger');
+    logger.log('App started');
 
-        if (instance) { return instance; }
+    this.startFeature('shouter');
 
-        instance = service.factory(application, service.options);
-        service.instance = instance;
-
-        return instance;
-    },
-    getGlobal: function(name) {
-        if (name in window) {
-			return window[name];
-		} else {
-			return null;
-		}
-
-    },
-    init: function (window, root, options) {
-        _global = window;
-        // this.view = new PageView({
-        //     el: root,
-        //     model: new Page({context: this})
-        // });
-        var logger = this.getService('logger')
-        logger.info('new info')
-        logger.log(require('./seed'))
-        logger.log(require('./seed'))
-        logger.log(require('./seed'))
-        logger.log(require('./seed'))
-    }
 };
+
+module.exports = app;

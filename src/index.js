@@ -9,9 +9,5 @@ var options = {
     debug: true
 };
 
-app.useService('logger', require('./services/logger'), {
-    label: 'DEBUG'
-});
-
-
+enviroment.ioc = app;
 app.init(enviroment, root, options);
