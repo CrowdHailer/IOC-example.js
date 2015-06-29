@@ -1,0 +1,23 @@
+{
+  "name": "ioc-example",
+  "version": "1.0.0",
+  "description": "Inversion of control architecture for JavaScript applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "watchify src/index.js -o index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrowdHailer/IOC-example.js.git"
+  },
+  "author": "Peter Saxton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CrowdHailer/IOC-example.js/issues"
+  },
+  "homepage": "https://github.com/CrowdHailer/IOC-example.js#readme",
+  "devDependencies": {
+    "watchify": "^3.2.3"
+  }
+}
