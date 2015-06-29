@@ -2,6 +2,7 @@
 
 var Infrastructure = require('infrastructure');
 var app = Infrastructure.create();
+// builder pattern then freeze
 
 app.useService('logger', require('./services/logger'), {
     label: 'DEBUG',
