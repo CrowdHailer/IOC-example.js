@@ -5,6 +5,6 @@ module.exports = function function_name($element, context, options) {
     var logger = context.getService('logger');
 
     $element.addEventListener('click', function(){
-        logger.log('clicked');
+        context.log('clicked');
     });
 };
