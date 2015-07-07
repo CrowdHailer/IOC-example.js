@@ -49,3 +49,14 @@ talks
 - [writing modular javascript seriously in depth](http://code.tutsplus.com/tutorials/writing-modular-javascript--net-14746)
 - [sateful plugins and the widget factory](https://msdn.microsoft.com/en-us/magazine/ff706600)
 - [scalable javascript applications](http://www.joezimjs.com/javascript/scalable-javascript-applications/)
+
+
+Grouping
+Position on webcomponents, use `is` attribute as hook?
+current development on framwork?
+current use?
+examples?
+posts/articles?
+is it a framework seams like should be a tier below MVC
+Avoid framwork fatigue
+module system - browserify for performance from reusable separate from HTML elements
