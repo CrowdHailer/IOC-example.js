@@ -60,3 +60,9 @@ posts/articles?
 is it a framework seams like should be a tier below MVC
 Avoid framwork fatigue
 module system - browserify for performance from reusable separate from HTML elements
+
+compare this to flight by twitter
+- [good flux implementation](http://www.smashingmagazine.com/2015/06/qualities-of-good-flux-implementations/)
+- http://fluxxor.com/documentation/actions.html
+- https://github.com/deloreanjs/delorean
+- http://optimizely.github.io/nuclear-js/
